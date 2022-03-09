@@ -96,7 +96,7 @@ namespace EmployeeManagementApi
         {
             var db = mongoClient.GetDatabase(mongoDbSettings.DatabaseId);
 
-            //SetCosmosDbThroughputIfNeeded(db, mongoDbSettings);
+            //SetCosmosDbThroughputIfNeeded(db, mongoDbSettings);   //Cannot implement this feature due to restrictions of pricing plan used.
             SetupCollectionIndexes(db, mongoDbSettings);
         }
 
