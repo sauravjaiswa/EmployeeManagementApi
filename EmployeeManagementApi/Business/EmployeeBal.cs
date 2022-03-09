@@ -76,6 +76,7 @@ namespace EmployeeManagementApi.Business
         public async Task<bool> ReplaceEmployeeByIdAsync(Guid employeeId, ReplaceEmployeeRequest replaceEmployeeRequest)
         {
             var employee = mapper.Map<Employee>(replaceEmployeeRequest);
+            employee.EmployeeId = employeeId;
 
             var isReplaced = await employeeRepository.ReplaceDocumentByIdAsync(employeeIdKey, employeeId, employee);
 

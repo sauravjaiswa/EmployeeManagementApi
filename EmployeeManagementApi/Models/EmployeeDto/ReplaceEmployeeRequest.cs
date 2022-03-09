@@ -1,11 +1,10 @@
 ﻿using System;
+using System.Text.Json.Serialization;
 
 namespace EmployeeManagementApi.Models.EmployeeDto
 {
     public class ReplaceEmployeeRequest
     {
-        public Guid EmployeeId { get; set; }
-
         public string EmployeeName { get; set; }
 
         public string DepartmentName { get; set; }

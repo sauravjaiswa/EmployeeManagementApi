@@ -65,11 +65,6 @@ namespace EmployeeManagementApi.Controllers
         {
             try
             {
-                if (employeeId != replaceEmployeeRequest.EmployeeId)
-                {
-                    return BadRequest();
-                }
-
                 var response = await employeeBal.ReplaceEmployeeByIdAsync(employeeId, replaceEmployeeRequest);
 
                 return NoContent();
